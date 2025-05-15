@@ -10,7 +10,7 @@ Route::get('/', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
 
 // Simpan data baru (POST only)
-Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
+Route::post('/', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
 
 // Tampilkan form edit
 Route::get('/mahasiswa/{mahasiswa}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');

@@ -12,7 +12,7 @@ class MahasiswaController extends Controller
         $mahasiswas = Mahasiswa::all();
         return view('mahasiswa.index', compact('mahasiswas'));
     }
-
+    
     public function create()
     {
         return view('mahasiswa.create');
@@ -20,6 +20,7 @@ class MahasiswaController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $data = $request->validate([
             'nama' => 'required|string|max:100',
             'kelas' => 'required|string|max:10',
